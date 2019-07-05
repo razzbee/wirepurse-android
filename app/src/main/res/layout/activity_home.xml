@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:background="@color/blueGreyL4"
+    app:layout_collapseMode="parallax"
+    android:fitsSystemWindows="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/circular_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    android:id="@+id/topAppBar"
+                    layout="@layout/drawer_app_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="?attr/colorPrimaryDark"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/topAppBar"
+                    app:layout_constraintBottom_toTopOf="@id/bottomNavView"
+                    android:weightSum="10">
+
+
+                    <include
+                        layout="@layout/home_coin_info"
+                        android:id="@+id/coinInfoCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/coinsCardParentScrollview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="6"
+                        android:minHeight="300dp"
+                        app:layout_constraintTop_toBottomOf="@id/coinInfoCard">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/coinsListRecycler"
+                            >
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                 </LinearLayout>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/bottom_navbar"
+                    android:layout_gravity="bottom"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/homeBottomSheet"
+            layout="@layout/home_bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <include layout="@layout/navigation_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

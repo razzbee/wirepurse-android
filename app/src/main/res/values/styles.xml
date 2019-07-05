@@ -1,0 +1,110 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item tools:targetApi="21"
+            name="android:windowContentTransitions">true</item>
+
+        <item  tools:targetApi="26"
+            name="android:autofilledHighlight">@android:color/transparent</item>
+
+        <item tools:targetApi="21"
+            name="android:statusBarColor">@android:color/transparent</item>
+
+        <item name="android:windowTranslucentStatus"
+            tools:targetApi="21">false</item>
+
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+
+    </style>
+
+    <style name="TextInputLayoutStyle"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusBottomEnd">30dp</item>
+        <item name="boxCornerRadiusBottomStart">30dp</item>
+        <item name="boxCornerRadiusTopEnd">30dp</item>
+        <item name="boxCornerRadiusTopStart">30dp</item>
+        <item name="boxStrokeColor">@color/text_input_stroke_color</item>
+        <item name="android:textColorHint">@color/blueGreyL3</item>
+        <item name="hintTextColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/blueGreyD2</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="TextInputStyle" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <item name="colorControlNormal">@color/green</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+
+    </style>
+
+    <style name="RoundedButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">25dp</item>
+        <item name="android:layout_height">60dp</item>
+
+    </style>
+
+    <style name="RoundedButtonOutlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+       <item name="android:layout_height">60dp</item>
+        <item name="cornerRadius">40dp</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+
+    <style name="AppIntroTheme" parent="Theme.AppCompat.NoActionBar" />
+
+    <style name="AppTheme.TransparentStatusBar" parent="AppTheme">
+        <item tools:targetApi="19"
+            name="android:windowTranslucentStatus">true</item>
+        <item tools:targetApi="21"
+            name="android:statusBarColor">@android:color/transparent</item>
+        <item tools:targetApi="21"
+            name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item  tools:targetApi="26"
+            name="android:autofilledHighlight">@android:color/transparent</item>
+    </style>
+
+    <style name="ProgressBarTheme">
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppEditText" parent="AppTheme">
+        <item name="colorControlNormal">@color/blueGreyD2</item>
+       <item name="colorControlActivated">@color/blueGreyD2</item>
+
+    </style>
+
+    <style name="DialogAnim" parent="android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+    <style name="ActivityDialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnim</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item  tools:targetApi="26"
+            name="android:autofilledHighlight">@android:color/transparent</item>
+
+        <item name="editTextColor">@color/blueGreyD2</item>
+    </style>
+
+    <style name="AppTheme.CheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+</resources>

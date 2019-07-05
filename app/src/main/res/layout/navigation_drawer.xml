@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.navigation.NavigationView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navView"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/sideNavBg"
+    app:elevation="10dp"
+    android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <include
+                android:id="@+id/nav_header_include"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                layout="@layout/nav_header"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+
+            <ListView
+                android:id="@+id/drawerListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/whiteAlpha50P"
+                android:dividerHeight="0.1dp"
+                app:layout_constraintTop_toBottomOf="@id/nav_header_include"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/copyrightTNS"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/whiteAlpha50P"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copyright_transcodium"
+            android:textColor="@color/coinInfoMenuTab"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+
+</com.google.android.material.navigation.NavigationView>

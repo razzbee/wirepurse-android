@@ -1,0 +1,343 @@
+<resources>
+    <string name="app_name">Wire Purse</string>
+
+    <string name="multi_coin_wallet">Multi Currency Wallet</string>
+    <string name="multi_coin_wallet_desc">Securely store multi crypto currencies</string>
+    <string name="cutting_edge_sucurity">Cutting Edge Security</string>
+    <string name="builtin_security_desc">
+       Cutting edge security features to
+        protect your funds from unauthorized access
+    </string>
+    <string name="builtin_exchange">Builtin Exchange</string>
+    <string name="builtin_exchange_desc">Super easy to use crypto-currency exchange with fiat support</string>
+
+    <string name="extra_premium_service">Extra Premium Services</string>
+    <string name="extra_premium_service_desc">
+        Extra premium  services available to you all at your convenience
+    </string>
+
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+
+    <string name="login">Login</string>
+    <string name="login_with_google">Login with Google</string>
+
+    <string name="login_with_facebook">Login with Facebook</string>
+
+    <string name="login_with_email">Login with Email</string>
+
+    <string name="login_with_twitter">Login with Twitter</string>
+
+    <string name="go_back">Go Back</string>
+
+    <string name="valid_email_required">A valid email address is required</string>
+
+    <string name="password_required">Password is Required</string>
+    <string name="app_logo">App Logo</string>
+
+    <string name="copyright_transcodium">&#169; Transcodium</string>
+    <string name="secure_url_required">A Secure API endpoint is required</string>
+    <string name="network_request_failed">Network Request failed, try again later</string>
+
+    <string name="unexpected_error">An unexpected error occurred, try again later</string>
+    <string name="code">Code</string>
+    <string name="login_success">Login Successful</string>
+    <string name="loading">Loading</string>
+    <string name="login_progress_text">Stay calm, processing login</string>
+    <string name="google_login_failed">Google Login Failed, Try again Later</string>
+    <string name="ooops">Ooops!</string>
+    <string name="unknown_social_provider">Unknown Social Name %1$s</string>
+    <string name="social_account_verification">%1$s Social Account Verification</string>
+    <string name="social_login_verification_info">
+       Email address verification required, a verification code has been sent to your email,
+       kindly check the inbox or spam box of the email address associated with this social account for the
+        code.
+    </string>
+    <string name="verification_code">Verification Code</string>
+    <string name="verify">Verify</string>
+    <string name="cancel">Cancel</string>
+    <string name="resend">Resend</string>
+
+    <string name="resend_after">Resend after</string>
+    <string name="resending_verification_code">Resending Verification Code</string>
+    <string name="code_sent_to_your_email">Code has been resent to your email</string>
+    <string name="invalid_code">Invalid code</string>
+    <string name="verifying_code">Verifying Code</string>
+
+    <string name="rsa_data_encryption_failed">Initial Data Encryption Failed</string>
+    <string name="rsa_data_decryption_failed">Initial Data Decryption Failed</string>
+
+    <string name="data_encryption_error">Data dncryption failed 2, reinstall app if error persists</string>
+    <string name="data_decryption_error">Data decryption failed 2, reinstall app if error persists</string>
+
+    <string name="security_logout_message">Secure data processing failed, as a security measure you have been logged out, please relogin</string>
+
+    <string name="encrypted_data_part_extract_error">Failed to extract encrypted data parts, reinstall app if error persists</string>
+    <string name="data_decryption_failed_error">Data decryption failed, please reinstall app if error persists</string>
+
+    <string name="facebook_login_failed">Facebook Login Failed</string>
+
+    <string name="facebook_login_cancelled">Facebook Login Request cancelled</string>
+
+    <string name="twitter_login_failed">Twitter Login Failed</string>
+
+    <string name="missing_app_key">Missing App Key</string>
+    <string name="initialization_error">Initialization Error</string>
+    <string name="initialization_error_message">Pre  startup initialization checkup failed, App will close</string>
+    <string name="ok">Okay !</string>
+
+    <string name="reset_password">Reset Password</string>
+
+    <string name="signup">Signup</string>
+
+    <string name="critical_error_message">A critical error occurred, please relogin. (Code: %1$s)</string>
+
+    <string name="failed_to_generate_security_keys">Failed to create security keys</string>
+
+    <string name="auth_required">Authentication required</string>
+
+    <string name="drawer_open">Drawer Open</string>
+
+    <string name="drawer_close">Drawer Close</string>
+
+    <string name="setting">Setting</string>
+
+    <string name="support">Support</string>
+
+    <string name="logout">Logout</string>
+
+    <string name="about">About</string>
+
+    <string name="wallet">Wallet</string>
+
+    <string name="exchange">Exchange</string>
+    <string name="w">w</string>
+    <string name="e">e</string>
+    <string name="current_balance">Current Balance</string>
+
+    <string name="auth_not_found">Authentication not found</string>
+
+    <string name="send">Send</string>
+    <string name="receive">Receive</string>
+
+    <string name="history">History</string>
+    <string name="network_not_available">Network or internet connection cannot be detected,
+        Please fix the issue and try again</string>
+
+    <string name="updating">Updating..</string>
+
+    <string name="more">More</string>
+
+    <string name="server_request_failed">Server request failed, Try again later</string>
+
+    <string name="date_colon">Date:</string>
+    <string name="price_colon">Price:</string>
+
+    <string name="hello_greeting">Hello !, %1$s</string>
+    <string name="confirm_logout_message">You will be logged out, do you wish to continue ?</string>
+    <string name="yes">Yes</string>
+    <string name="no_comma_cancel">No, Cancel</string>
+    <string name="logout_cancelled">Logout cancelled</string>
+    <string name="no">No</string>
+    <string name="http_error">HTTP Request Error</string>
+    <string name="server_connection_failed">Server Connection Failed</string>
+    <string name="deposit">Deposit</string>
+    <string name="receive_space_asset">Receive %1$s</string>
+    <string name="no_assets_available">No Assets available, contact support if problem persists</string>
+    <string name="deposit_asset">Deposit Asset</string>
+    <string name="unknown_asset">Unknown Asset %1$s</string>
+    <string name="copy">Copy</string>
+    <string name="copy_address">Copy Address</string>
+    <string name="generate">Generate</string>
+    <string name="address_copied_to_clipboard">Address copied to clipboard</string>
+    <string name="app_loading_data">App is loading, kindly wait</string>
+    <string name="send_space_asset">Send %1$s</string>
+
+    <string name="send_to_address">Send To Address</string>
+    <string name="send_to_user">Send To User</string>
+    <string name="scan_with_camera">Scan With Camera</string>
+
+    <string name="camera_permission_message">To use the scanner, please select \'Allow\' when prompted on camera\'s permission</string>
+    <string name="camera_perm_denied">Camera Permission Denied</string>
+    <string name="qr_scanner_message">Place barcode inside the box</string>
+    <string name="scanner_toggle_torch">Volume up / down for torch</string>
+    <string name="qrcode_has_empty_data">QRCode contains no data</string>
+    <string name="unsupported_payment_address">Unsupported Payment Address</string>
+    <string name="invalid_qr_code">QRCode does not contain a valid %1$s data</string>
+    <string name="address">Address</string>
+    <string name="asset_name_space_address">%1$s Address</string>
+    <string name="amount">Amount</string>
+    <string name="save_address">Save Address</string>
+    <string name="label">Label</string>
+    <string name="label_optional">Label (optional)</string>
+    <string name="receipient_email_address">Recipient Email Address</string>
+    <string name="amount_to_send">Amount To Send</string>
+    <string name="operation_aborted_by_user">Operation aborted by user</string>
+    <string name="set_app_pin_message">
+        You are required to set an app access pin code, a 4 numeric characters
+        which will be used to prevent any unauthorized access.
+    </string>
+    <string name="four_digits_pin_code">4 Digits Pin Code</string>
+    <string name="confirm_pin_code">Confirm Pin Code</string>
+    <string name="enable_fingerprint_support">Enable Fingerprint Support</string>
+    <string name="save">Save</string>
+    <string name="pincode_lenght_error">Pin code field requires a 4 numeric charaters</string>
+    <string name="pincodes_dont_match">Pin codes do not match</string>
+
+    <string name="enable_fingerprint_setting">
+       Your device\'s fingerprint hardware is not enabled,
+        you will be forwarded to settings to
+        enable it before you proceed.
+    </string>
+    <string name="pincode_saved">Pincode saved successfully</string>
+    <string name="enter_pincode">Enter Pin Code</string>
+    <string name="_continue">Continue</string>
+    <string name="fingerprint_init_failed">Failed to initialize fingerprint due to many failed attempts</string>
+    <string name="fingerprint_auth_failed">Fingerprint authentication failed</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="fingerint_auth_msg">Kindly confirm your fingerprint to continue</string>
+    <string name="fingerprint_auth_instruction">
+        Touch your device\'s  fingerprint sensor
+    </string>
+    <string name="use_pin_code">Use Pin Code</string>
+    <string name="use_fingerprint">Use Fingerprint</string>
+    <string name="pin_code">Pin Code</string>
+    <string name="idle_fingerprint_ui_closed">Idle fingerprint window closed to save resources</string>
+    <string name="fingerprint_records_not_found">Your fingerprint data was not found on device, disabling fingerprint support</string>
+    <string name="retry_msg">You have %1$s attempt</string>
+    <string name="invalid_pincode">Invalid Pin code, you have %1$s attempt</string>
+    <string name="in_app_auth_failed">
+        InApp Authentication Failed, You have been logged out
+    </string>
+    <string name="in_app_auth_success">InApp Authentication Successful</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="confirm">Confirm</string>
+    <string name="invalid_crypto_address">Invalid %1$s address</string>
+    <string name="invalid_amount_to_send">Invalid amount to send</string>
+    <string name="payment_id">Payment ID</string>
+    <string name="recipient_address">Recipient Address</string>
+    <string name="send_mode">Send Mode</string>
+    <string name="internal">Internal</string>
+    <string name="confirm_transfer">Confirm Transfer</string>
+    <string name="fingerprint_failed_msg">Fingerprint failed to initialize or was closed by user</string>
+    <string name="payment_id_or_destination_tag">Payment ID / Destination Tag</string>
+    <string name="free_internal_tx">0% fees on all internal transfers</string>
+    <string name="invalid_email_address">Invalid Email Address</string>
+    <string name="external">External</string>
+    <string name="default_loading_text">Stay calmed, processing your request</string>
+    <string name="login_home">Login Home</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="request">Request</string>
+    <string name="verification_code_instruction">Click on \'Send or Resend\' to get code in your inbox</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="full_name">Full Name</string>
+    <string name="invalid_recaptcha_key">Invalid recaptcha key, kindly report to support</string>
+    <string name="invalid_recaptcha_key_type">Recpatcha error, key type unknown</string>
+    <string name="recaptcha_invalid_package">Recaptcha error, invalid package, kindly report error to support</string>
+    <string name="recaptcha_unsupported_sdk_version">Recaptcha error, unsupported sdk version, kindly report error to support</string>
+    <string name="recaptcha_timeout">Recaptcha request timeout</string>
+    <string name="recaptcha_network_error">Recaptcha network error, kindly make sure your internet is working</string>
+    <string name="recaptcha_general_error">Recaptcha, an error occured whilst processing your request</string>
+    <string name="verification_code_required">Verification code is required</string>
+    <string name="verification_code_must_be_numeric">Verification code must be numeric</string>
+    <string name="full_name_is_required">Full name is required</string>
+    <string name="signup_success">Signup successful</string>
+    <string name="signup_progress_text">Proccessing Signup</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="fee_colon">Fee:</string>
+    <string name="na">N/A</string>
+    <string name="total_colon">Total:</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="withdrawal_fee">Withdrawal Fee</string>
+    <string name="insufficient_balance">Insufficient balance</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="by_transcodium">By Transcodium</string>
+    <string name="wallet_info">"Wire Purse is the official wallet for the Transcodium project with the aim of eliminating the complexities involved in the usage of most blockchain based products. This product will be the main payment hub for all activities on the Transcodium platform. "</string>
+    <string name="terms_of_service">Terms of service</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="for_merchants">For merchants</string>
+    <string name="partnership">For partners</string>
+    <string name="inapp_auth">InApp Authentication</string>
+    <string name="pincode_and_biometric">Pincode and Biometric</string>
+    <string name="two_factor_auth">Two Factor Authentication</string>
+    <string name="google_auth_or_authy">Google Authenticator or Authy</string>
+    <string name="account_email">Account Email</string>
+    <string name="inapp_auth_disabled">InApp Auth Disabled Successully</string>
+    <string name="account_setting">Account Setting</string>
+    <string name="saving_data">Saving Data</string>
+    <string name="email">Email</string>
+    <string name="livechat">Live chat</string>
+    <string name="twitter">Twitter</string>
+    <string name="telegram">Telegram</string>
+    <string name="testnet_warning">This app is running on testnet, do not send coins / tokens from main net  else you will lose them all, we cannot be held responsible for your loses.</string>
+    <string name="new_notifications">New Notifications</string>
+    <string name="you_have_notifications">You have %1$s notifications</string>
+    <string name="kindly_login_to_continue">Kindly login to continue</string>
+    <string name="notifications">Notifications</string>
+    <string name="refresh">Refresh</string>
+    <string name="delete">Delete</string>
+    <string name="notification_will_delete">Notification will be removed forever</string>
+    <string name="undo">undo</string>
+    <string name="_new">New</string>
+    <string name="second_ago">second ago</string>
+    <string name="seconds_ago">seconds ago</string>
+    <string name="a_minute_a_go">a minute ago</string>
+    <string name="today_at">today at</string>
+    <string name="asset_transaction_history">%1$s Transaction History</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="transactions">Transactions</string>
+    <string name="buy_asset">Buy %1$s</string>
+    <string name="sell_asset">Sell %1$s</string>
+    <string name="no_data_found">No data found</string>
+    <string name="asset">Asset</string>
+    <string name="type">Type</string>
+    <string name="mode">Mode</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="hash">Hash</string>
+    <string name="withdrawal">Withdrawal</string>
+    <string name="network_error_msg">Network error, kindly check your internet connection and reload</string>
+    <string name="retry">Retry</string>
+    <string name="retrying_request">Stay calm, retrying request</string>
+    <string name="transaction_types">Transaction Types</string>
+    <string name="deposits">Deposits</string>
+    <string name="withdrawals">Withdrawals</string>
+    <string name="transaction_modes">Transaction Modes</string>
+    <string name="date">Date</string>
+    <string name="status">Status</string>
+    <string name="pending">Pending</string>
+    <string name="processing">Processing</string>
+    <string name="processed">Processed</string>
+    <string name="filter_result">Filter Result</string>
+    <string name="date_range">Date Range</string>
+    <string name="start_date_optional">Start Date (optional)</string>
+    <string name="end_date_optional">End Date (optional)</string>
+    <string name="system_busy">System busy try again later</string>
+    <string name="end_date">End Date</string>
+    <string name="start_date">Start Date</string>
+    <string name="reload">Reload</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="no_notification_available">No notification available</string>
+    <string name="exit_app">"Exit App "</string>
+    <string name="confirm_exit_app">Do you wish to close app ?</string>
+    <string name="in_app_auth_cancelled_by_user">InApp Auth cancelled by user</string>
+    <string name="disable">Disable</string>
+    <string name="enable_twofa">Enable 2FA</string>
+    <string name="twofa_already_enabled">Two factor authentication already enabled</string>
+    <string name="secret_key">Secret Key</string>
+    <string name="verify_2fa_code">Verify 2FA Code</string>
+    <string name="twofa_code">2FA Code</string>
+    <string name="verify_and_save">Verify &amp; Save</string>
+    <string name="click_to_copy">Click or tap to copy</string>
+    <string name="secret_key_copied">Secret Key Copied to clipboard</string>
+    <string name="twofa_code_must_be_numeric">2FA code must be numeric</string>
+    <string name="twofa_already_disabled">TwoFA already disabled</string>
+    <string name="disable_2fa">Disable 2FA</string>
+    <string name="enable">Enable</string>
+    <string name="twofa_auth_failed">Two Factor Authentication Failed</string>
+    <string name="fetch">Fetch</string>
+    <string name="min_withdrawal_amount_error">Amount cannot be less than %1$s</string>
+    <string name="tos_agreement_text">By Logging in, you hereby agree to our privacy policy &amp; terms of use</string>
+    <string name="refreshing_assets_data">Refreshing Assets Data</string>
+</resources>

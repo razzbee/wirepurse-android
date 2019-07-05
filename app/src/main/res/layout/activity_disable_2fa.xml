@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Enable2faActivity"
+    android:background="@color/blueGreyL5"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/app_bar" />
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/circular_progress_bar"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/twoFAStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center"
+            android:background="@color/colorPrimaryDark">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:src="@drawable/ic_padlock"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/twofa_already_disabled"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/enable2faBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enable"
+                app:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                app:elevation="10dp"
+                android:padding="10dp"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/twoFaDataView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp">
+
+                <include layout="@layout/twofa_view_full" />
+
+                <include layout="@layout/verification_code_layout" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/verifyAndSave"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/rounded_btn"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:text="@string/verify_and_save"
+                    android:textColor="@color/whiteAlpha70"
+                    app:backgroundTint="@color/colorAccent"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

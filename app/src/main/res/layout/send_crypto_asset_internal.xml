@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SendCryptoAssetActivity"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:layout_gravity="center">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/availableBalanceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/available_balance"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/blueGreyL2"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/userBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/available_balance"
+                    app:layout_constraintTop_toBottomOf="@id/availableBalanceLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp"
+                    android:paddingBottom="10dp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/internalReciepientEmailInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userBalance"
+                    style="@style/TextInputLayoutStyle"
+                    android:hint="@string/receipient_email_address">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/internalReciepientEmailInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:inputType="textWebEmailAddress"
+                        android:maxLines="1"
+                        android:textColor="@color/blueGreyD2"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <include
+                    layout="@layout/transefer_amount_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/transferAmountSlider"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/internalReciepientEmailInputLayout"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/internalAmountToSendInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/transferAmountSlider"
+                    style="@style/TextInputLayoutStyle"
+                    android:hint="@string/amount_to_send">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/internalAmountToSendInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:textColor="@color/blueGreyD2"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <include
+                    android:id="@+id/verifCodeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/verification_code_layout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/internalAmountToSendInputLayout"
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/txSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/verifCodeLayout"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/internalTxFeeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blueGrey"
+                        android:text="@string/fee_colon"
+                        android:textSize="12sp"
+                        android:layout_margin="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/internalTxFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/blueGrey"
+                        android:text="@string/total_colon"
+                        android:layout_margin="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:ellipsize="end"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/internalTxTotalText"
+                        android:text="@string/total_colon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/blueGrey"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/internalTxFeeText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/internalTxTotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/blueGrey"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/internalTxFeeText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/internalSendBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txSummary"
+                    android:background="@drawable/login_button"
+                    android:theme="@style/AppTheme"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:textColor="@color/blueGreyL5"
+                    android:text="@string/send"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

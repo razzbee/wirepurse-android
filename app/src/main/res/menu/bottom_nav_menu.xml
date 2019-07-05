@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/wallet"
+        android:title="@string/wallet"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_wallet"
+        app:iconTint="@color/blackAlpha30Percent"
+        app:iconTintMode="src_in"
+        android:alphabeticShortcut="@string/w"
+        />
+
+    <item
+        android:id="@+id/exchange"
+        android:title="@string/exchange"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_exchange"
+        app:iconTint="@color/blackAlpha30Percent"
+        app:iconTintMode="src_in"
+        android:alphabeticShortcut="@string/e"
+        />
+</menu>

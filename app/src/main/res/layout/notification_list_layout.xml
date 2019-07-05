@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/deleteItemLabelParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="5dp"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/deleteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:text="@string/delete"
+            app:layout_constraintEnd_toStartOf="@id/deleleIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            />
+
+        <ImageView
+            android:id="@+id/deleleIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/foregroundView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/undoDeleteParent"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/colorPrimary"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/undoDeleteCard"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="0dp"
+                app:cardCornerRadius="0dp"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="0dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textSize="14sp"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/white"
+                        android:text="@string/undo"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/countDownTimerTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/deletionNotice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notification_will_delete"
+                    app:layout_constraintEnd_toStartOf="@id/undoDeleteCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/white"
+                    />
+
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/notificationItemView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentPadding="0dp"
+            app:cardUseCompatPadding="false"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/icon_container"
+                    android:layout_width="68dp"
+                    android:layout_height="match_parent"
+                    android:minHeight="86dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="6dp"
+                    app:cardUseCompatPadding="false"
+                    app:cardCornerRadius="0dp"
+                    app:contentPadding="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary">
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_transfer"
+                        android:layout_gravity="center"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp">
+
+                    <TextView
+                        android:id="@+id/notifTitleView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/blueGrey"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/notifMessageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/blueGrey"
+                        app:layout_constraintTop_toBottomOf="@id/notifTitleView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/newNotifIcon"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:src="@drawable/ic_dot"
+                        app:tint="@color/green"
+                        app:layout_constraintTop_toBottomOf="@id/notifMessageView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/newNotifText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textStyle="italic"
+                        android:text="@string/_new"
+                        android:textColor="@color/blueGrey"
+                        app:layout_constraintTop_toBottomOf="@id/notifMessageView"
+                        app:layout_constraintStart_toEndOf="@id/newNotifIcon"
+                        android:layout_marginStart="3dp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/notifDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/blueGrey"
+                        app:layout_constraintTop_toBottomOf="@id/notifMessageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_margin="3dp"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</FrameLayout>
+

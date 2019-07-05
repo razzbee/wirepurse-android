@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="false">
+        <shape
+            android:shape="rectangle">
+            <solid
+                android:color="@android:color/transparent"
+                />
+            <corners android:radius="@dimen/roundedEditTextHeight" />
+            <stroke
+                android:color="@color/blueGreyL4"
+                android:width="@dimen/roundedEditTextBorderSize"
+                />
+
+            <padding
+                android:left="@dimen/roundedEditTextPadding"
+                android:right="@dimen/roundedEditTextPadding"
+                android:bottom="@dimen/roundedEditTextPadding"
+                android:top="@dimen/roundedEditTextPadding" />
+        </shape>
+    </item>
+
+    <item
+        android:state_focused="true">
+        <shape
+            android:shape="rectangle">
+            <solid
+                android:color="@android:color/transparent"
+                />
+            <corners android:radius="@dimen/roundedEditTextHeight" />
+            <stroke
+                android:color="@color/colorPrimary"
+                android:width="@dimen/roundedEditTextBorderSize" />
+            <padding
+                android:left="@dimen/roundedEditTextPadding"
+                android:right="@dimen/roundedEditTextPadding"
+                android:bottom="@dimen/roundedEditTextPadding"
+                android:top="@dimen/roundedEditTextPadding" />
+
+        </shape>
+    </item>
+
+</selector>

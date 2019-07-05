@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteAlpha70">
+
+        <LinearLayout
+            android:id="@+id/coinNameWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/coinNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/whiteAlpha50P"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+            />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

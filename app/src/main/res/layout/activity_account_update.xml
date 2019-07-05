@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountUpdateActivity"
+    android:background="@color/white"
+    android:minWidth="280dp"
+    android:paddingBottom="20dp">
+
+    <include
+        layout="@layout/dialog_header"
+        android:id="@+id/dialogHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/dialogHeader">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingTop="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullNameInputLayout"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/full_name"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_line_user_selector"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/blueGreyD2"
+                    android:drawablePadding="8dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/verificationCodeInputParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/fullNameInputLayout">
+
+                <include
+                    layout="@layout/verification_code_layout"
+                    />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveAccountUpdateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                style="@style/RoundedButton"
+                app:backgroundTint="@color/colorAccent"
+                app:layout_constraintTop_toBottomOf="@id/verificationCodeInputParent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

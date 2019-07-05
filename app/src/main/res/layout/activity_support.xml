@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/blueGreyL5">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:title="@string/support"
+            app:titleEnabled="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:expandedTitleMarginEnd="@dimen/activity_vertical_margin"
+            app:expandedTitleMarginStart="@dimen/activity_horizontal_margin"
+            app:expandedTitleGravity="bottom"
+            app:expandedTitleTextAppearance="@style/ThemeOverlay.AppCompat.Dark">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/support"
+                app:layout_collapseMode="parallax"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light">
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/supportEmailCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:contentPaddingTop="15dp"
+                app:cardUseCompatPadding="false"
+                app:cardCornerRadius="0dp"
+                app:contentPadding="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email"
+                        android:textSize="15sp"
+                        android:textColor="@color/blueGrey"
+                        android:layout_weight="2"
+                        android:textAlignment="viewStart"
+                        android:ellipsize="end"
+                        android:textStyle="bold"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/supportEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_weight="8"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@android:color/transparent"
+                        android:textAlignment="viewEnd"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="8dp"
+                        android:ellipsize="end"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/livechatCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="0dp"
+                app:contentPadding="12dp"
+                app:contentPaddingTop="20dp"
+                app:contentPaddingBottom="20dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginEnd="-10dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/supportEmailCard"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/livechat"
+                        android:textSize="15sp"
+                        android:textColor="@color/blueGrey"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textAlignment="viewStart"
+                        android:ellipsize="end"
+                        android:textStyle="bold"
+                        />
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/blueGreyL2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/twitterCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="0dp"
+                app:contentPadding="12dp"
+                app:contentPaddingTop="20dp"
+                app:contentPaddingBottom="20dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginEnd="-10dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/livechatCard"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/twitter"
+                        android:textSize="15sp"
+                        android:textColor="@color/blueGrey"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textAlignment="viewStart"
+                        android:ellipsize="end"
+                        android:textStyle="bold"
+                        />
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/blueGreyL2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/telegramCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="0dp"
+                app:contentPadding="12dp"
+                app:contentPaddingTop="20dp"
+                app:contentPaddingBottom="20dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginEnd="-10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="-10dp"
+                app:layout_constraintTop_toBottomOf="@id/twitterCard"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/telegram"
+                    android:textSize="15sp"
+                    android:textColor="@color/blueGrey"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textAlignment="viewStart"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    />
+
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/blueGreyL2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

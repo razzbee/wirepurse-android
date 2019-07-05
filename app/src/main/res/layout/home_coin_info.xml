@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/colorPrimaryDark"
+    app:cardCornerRadius="1dp"
+    app:cardUseCompatPadding="false"
+    app:cardMaxElevation="0dp"
+    app:cardPreventCornerOverlap="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userBalanceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/balanceFirstDigit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whiteAlpha30"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="50sp"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/userBalanceDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whiteAlpha30"
+                app:layout_constraintStart_toEndOf="@id/balanceFirstDigit"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="@id/balanceFirstDigit"
+                android:layout_marginTop="14dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/coinTicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whiteAlpha30"
+                app:layout_constraintStart_toEndOf="@id/balanceFirstDigit"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                app:textAllCaps="true"
+                app:layout_constraintTop_toBottomOf="@id/userBalanceDecimal"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/coinInfoChart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userBalanceView"
+            app:layout_constraintBottom_toTopOf="@id/coinMenuTabLayout"
+            android:paddingTop="2dp"
+            android:translationX="10dp"
+            android:translationY="15dp"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/coinMenuTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/coinInfoMenuTab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tabTextColor="@color/whiteAlpha70"
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            app:tabInlineLabel="true"
+            app:tabIndicatorHeight="0dp"
+            app:tabRippleColor="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sendAsset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/send"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:textColor="@color/whiteAlpha50P"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/receiveAsset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/receive"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:textColor="@color/whiteAlpha50P"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/assetMoreOptions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:textColor="@color/whiteAlpha50P"
+                />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

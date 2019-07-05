@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/blueGreyL5">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:title="@string/about"
+            app:titleEnabled="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:expandedTitleMarginEnd="@dimen/activity_vertical_margin"
+            app:expandedTitleMarginStart="@dimen/activity_horizontal_margin"
+            app:expandedTitleGravity="bottom"
+            app:expandedTitleTextAppearance="@style/ThemeOverlay.AppCompat.Dark">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/about"
+                app:layout_collapseMode="parallax"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       app:layout_constraintTop_toBottomOf="@id/appBar">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/appBasicInfo"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="5dp"
+               app:cardMaxElevation="10dp"
+               app:cardUseCompatPadding="false"
+               app:contentPaddingTop="10dp"
+               app:contentPaddingBottom="20dp"
+               android:layout_marginBottom="4dp"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+
+                   <ImageView
+                       android:id="@+id/appLogo"
+                       android:layout_width="80dp"
+                       android:layout_height="80dp"
+                       android:src="@drawable/logo_only_blue"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       />
+
+                   <TextView
+                       android:id="@+id/appNameAndVersion"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:textColor="@color/blueGrey"
+                       app:layout_constraintTop_toBottomOf="@id/appLogo"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       android:textStyle="italic"
+                       />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/by_transcodium"
+                       android:textColor="@color/colorPrimary"
+                       app:layout_constraintTop_toBottomOf="@id/appNameAndVersion"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       android:textSize="14sp"
+                       />
+
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/walletInfoParent"
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               app:cardElevation="5dp"
+               app:contentPaddingTop="15dp"
+               app:cardUseCompatPadding="true"
+               app:cardCornerRadius="0dp"
+               app:contentPadding="12dp"
+               android:layout_marginStart="-10dp"
+               android:layout_marginEnd="-10dp"
+               app:cardBackgroundColor="@color/white"
+               app:layout_constraintTop_toBottomOf="@id/appBasicInfo">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/walletInfo"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/wallet_info"
+                       android:textSize="16sp"
+                       android:paddingTop="15dp"
+                       android:textColor="@color/blueGrey"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       />
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               app:cardElevation="5dp"
+               app:cardUseCompatPadding="true"
+               app:cardCornerRadius="0dp"
+               app:contentPadding="12dp"
+               android:layout_marginStart="-10dp"
+               android:layout_marginEnd="-10dp"
+               app:cardBackgroundColor="@color/white"
+               app:layout_constraintTop_toBottomOf="@id/walletInfoParent">
+
+               <ListView
+                   android:id="@+id/listView"
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   app:layout_constraintTop_toTopOf="parent"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginBottom="10dp"
+                   android:divider="@color/blueGreyL5"
+                   android:dividerHeight="1dp"
+                   android:footerDividersEnabled="false"
+                   android:overScrollFooter="@android:color/transparent"
+                   />
+
+           </androidx.cardview.widget.CardView>
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

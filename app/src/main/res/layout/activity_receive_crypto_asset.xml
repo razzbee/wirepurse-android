@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ReceiveCryptoAssetActivity"
+    android:padding="0dp">
+
+
+    <include
+        layout="@layout/dialog_header"
+        android:id="@+id/dialogHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/dialogHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        android:minHeight="200dp"
+        android:background="@color/blueGreyL5"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                layout="@layout/circular_progress_bar"
+                android:layout_gravity="center"
+                />
+
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                layout="@layout/reload_content_view"
+                android:layout_gravity="center"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/testnet_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="8dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/testnet_warning"
+                    android:visibility="gone"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/qrCodeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/testnet_warning"
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addressFieldCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/qrCodeView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:contentPadding="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:id="@+id/addressTextField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/blueGreyD2"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/addressFieldCard"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/copyAddressBtn"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_btn"
+                        app:backgroundTint="@color/colorAccent"
+                        android:text="@string/copy"
+                        android:textColor="@color/white"
+                        android:layout_marginEnd="2dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        />
+
+                        <!--
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/generateAddressBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_btn"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:text="@string/fetch"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="2dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            />
+                        -->
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
